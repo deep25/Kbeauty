@@ -280,8 +280,20 @@ const routines = {
   }
 };
 
-function url(asin){ return `https://www.amazon.com/dp/${asin}?tag=${TAG}`; }
-
+function url(asin){ 
+  const searchTerms = {
+    'B09XWS7GXN':'COSRX+Snail+Mucin+96+Essence',
+    'B09CGQXG6W':'Beauty+of+Joseon+Relief+Sun+SPF50',
+    'B0B5HGZ7JF':'BIODANCE+Bio+Collagen+Deep+Mask',
+    'B0BV7YJGLF':'Medicube+Zero+Pore+Pads',
+    'B01DBTFO98':'LANEIGE+Lip+Sleeping+Mask',
+    'B0CQJX9P5T':'Dr+Althea+345+Relief+Cream',
+    'B0BXF4GNMZ':'Medicube+Age+R+Booster+Pro',
+    'B00MIPNBG2':'COSRX+Low+pH+Good+Morning+Cleanser'
+  };
+  const search = searchTerms[asin] || 'K-beauty+skincare';
+  return `https://www.amazon.com/s?k=${search}&tag=${TAG}`;
+}
 // ─── SHOP ───
 function renderShop(f){
   const list = f==='all' ? items : items.filter(p=>p.cats.includes(f));
