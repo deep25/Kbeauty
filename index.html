@@ -5,29 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:title" content="K-Beauty Picks — Find Your Perfect Routine">
 <meta property="og:description" content="Take the skin quiz or browse my favourite K-beauty picks on Amazon.">
-<meta property="og:image" content="https://images-na.ssl-images-amazon.com/images/I/71S5PK7BVIL._SL1500_.jpg">
 <title>K-Beauty Picks ✨</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#fafaf9;color:#1a1a1a;min-height:100vh}
 .store{max-width:500px;margin:0 auto;padding:0 0 2rem}
-
-/* HEADER */
 .header{text-align:center;padding:1.75rem 1rem 1.25rem;background:#fff;border-bottom:1px solid #f0ede8}
 .logo{width:52px;height:52px;border-radius:50%;background:#fce7f3;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:24px}
 .store-name{font-size:22px;font-weight:700;margin-bottom:5px}
 .store-bio{font-size:13px;color:#666;line-height:1.6;max-width:320px;margin:0 auto}
-
-/* TAB NAV */
 .tab-nav{display:flex;background:#fff;border-bottom:1px solid #f0ede8}
 .tab{flex:1;padding:13px 8px;text-align:center;font-size:13px;font-weight:600;color:#999;cursor:pointer;border-bottom:2px solid transparent;transition:all 0.15s}
 .tab.active{color:#1a1a1a;border-bottom-color:#1a1a1a}
-
-/* VIEWS */
 .view{display:none}
 .view.active{display:block}
-
-/* ─── QUIZ ─── */
 .quiz-wrap{padding:1.25rem 1rem}
 .q-progress{height:3px;background:#f0ede8;border-radius:2px;margin-bottom:1.5rem}
 .q-fill{height:100%;background:#1a1a1a;border-radius:2px;transition:width 0.3s}
@@ -44,8 +35,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .btn-back{font-size:13px;color:#999;background:none;border:none;cursor:pointer;padding:0}
 .btn-next{font-size:13px;font-weight:600;padding:10px 24px;border-radius:20px;background:#1a1a1a;color:#fff;border:none;cursor:pointer;opacity:0.35;transition:opacity 0.15s}
 .btn-next.ready{opacity:1}
-
-/* QUIZ RESULTS */
 .result-wrap{padding:1.25rem 1rem}
 .result-profile{background:#fff;border:1px solid #f0ede8;border-radius:16px;padding:1.25rem;margin-bottom:1rem}
 .result-top{display:flex;align-items:center;gap:12px;margin-bottom:12px}
@@ -60,8 +49,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .result-insight{font-size:13px;color:#555;line-height:1.6;border-left:2px solid #e8e4df;padding-left:12px}
 .result-heading{font-size:12px;font-weight:700;letter-spacing:0.07em;color:#999;margin:1.25rem 0 10px;text-transform:uppercase}
 .retake-btn{width:100%;margin-top:12px;padding:10px;font-size:13px;color:#999;background:#fff;border:1px solid #e8e4df;border-radius:12px;cursor:pointer}
-
-/* ─── SHOP ─── */
 .filters{display:flex;gap:6px;padding:1rem;overflow-x:auto;-webkit-overflow-scrolling:touch;background:#fff;border-bottom:1px solid #f0ede8;scrollbar-width:none}
 .filters::-webkit-scrollbar{display:none}
 .fbtn{font-size:12px;padding:6px 14px;border-radius:20px;border:1px solid #e0ddd8;background:#fff;cursor:pointer;color:#666;white-space:nowrap;transition:all 0.15s;flex-shrink:0}
@@ -83,8 +70,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .price{font-size:14px;font-weight:700;color:#1a1a1a}
 .buy{font-size:12px;padding:7px 16px;border-radius:20px;background:#1a1a1a;color:#fff;border:none;cursor:pointer;text-decoration:none;display:inline-block;font-weight:600;transition:opacity 0.15s}
 .buy:hover{opacity:0.8}
-
-/* SHARE + FOOTER */
 .share-box{margin:0 1rem;background:#fff;border:1px solid #f0ede8;border-radius:16px;padding:1.25rem;text-align:center}
 .share-title{font-size:14px;font-weight:700;margin-bottom:4px}
 .share-sub{font-size:12px;color:#666;margin-bottom:14px}
@@ -93,8 +78,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .sbtn.green{background:#25d366;color:#fff;border-color:#25d366}
 .disclaimer{text-align:center;font-size:11px;color:#ccc;margin:1.25rem 1rem 0;line-height:1.5}
 .empty{text-align:center;padding:2rem;color:#999;font-size:14px}
-
-/* QUIZ CTA BANNER in shop tab */
 .quiz-cta{margin:1rem;background:#fce7f3;border-radius:16px;padding:1.1rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:12px}
 .quiz-cta-text p:first-child{font-size:13px;font-weight:700;color:#1a1a1a;margin-bottom:2px}
 .quiz-cta-text p:last-child{font-size:12px;color:#666}
@@ -115,7 +98,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <div class="tab" onclick="showTab('quiz',this)">✨ Skin quiz</div>
   </div>
 
-  <!-- ═══════════ SHOP TAB ═══════════ -->
+  <!-- SHOP TAB -->
   <div class="view active" id="view-shop">
     <div class="quiz-cta">
       <div class="quiz-cta-text">
@@ -124,18 +107,16 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       </div>
       <button class="quiz-cta-btn" onclick="showTab('quiz',document.querySelectorAll('.tab')[1])">Take quiz →</button>
     </div>
-
-    <div class="filters" id="filters">
+    <div class="filters">
       <button class="fbtn active" onclick="filter('all',this)">All picks</button>
       <button class="fbtn" onclick="filter('viral',this)">Viral 🔥</button>
       <button class="fbtn" onclick="filter('skincare',this)">Skincare</button>
       <button class="fbtn" onclick="filter('spf',this)">SPF</button>
+      <button class="fbtn" onclick="filter('toner',this)">Toners</button>
       <button class="fbtn" onclick="filter('device',this)">Devices</button>
       <button class="fbtn" onclick="filter('under20',this)">Under $20</button>
     </div>
-
     <div class="products" id="product-list"></div>
-
     <div class="share-box" style="margin-top:1rem">
       <div class="share-title">Know someone into K-beauty?</div>
       <div class="share-sub">Share this page — everything ships from Amazon</div>
@@ -147,15 +128,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <div class="disclaimer">As an Amazon Associate I earn from qualifying purchases at no extra cost to you.</div>
   </div>
 
-  <!-- ═══════════ QUIZ TAB ═══════════ -->
+  <!-- QUIZ TAB -->
   <div class="view" id="view-quiz">
-
-    <!-- QUESTIONS -->
     <div id="quiz-questions" class="quiz-wrap">
       <div class="q-progress"><div class="q-fill" id="q-fill" style="width:20%"></div></div>
-
-      <!-- Q1 -->
-      <div class="qstep active" id="q1">
+      <div class="qstep" id="q1">
         <div class="q-title">What's your main skin concern?</div>
         <div class="q-sub">We'll match you with the right K-beauty routine</div>
         <div class="q-opts">
@@ -166,8 +143,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
         </div>
         <div class="q-nav"><span class="q-step">1 of 4</span><button class="btn-next" id="next1" onclick="goTo(2)">Next →</button></div>
       </div>
-
-      <!-- Q2 -->
       <div class="qstep" id="q2" style="display:none">
         <div class="q-title">What's your skin type?</div>
         <div class="q-sub">Be honest — it changes everything</div>
@@ -179,8 +154,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
         </div>
         <div class="q-nav"><button class="btn-back" onclick="goTo(1)">← Back</button><span class="q-step">2 of 4</span><button class="btn-next" id="next2" onclick="goTo(3)">Next →</button></div>
       </div>
-
-      <!-- Q3 -->
       <div class="qstep" id="q3" style="display:none">
         <div class="q-title">How familiar are you with K-beauty?</div>
         <div class="q-sub">Shapes the complexity of your routine</div>
@@ -192,8 +165,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
         </div>
         <div class="q-nav"><button class="btn-back" onclick="goTo(2)">← Back</button><span class="q-step">3 of 4</span><button class="btn-next" id="next3" onclick="goTo(4)">Next →</button></div>
       </div>
-
-      <!-- Q4 -->
       <div class="qstep" id="q4" style="display:none">
         <div class="q-title">What's your budget per product?</div>
         <div class="q-sub">K-beauty has incredible value at every price point</div>
@@ -206,8 +177,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
         <div class="q-nav"><button class="btn-back" onclick="goTo(3)">← Back</button><span class="q-step">4 of 4</span><button class="btn-next" id="next4" onclick="showResults()">See my routine →</button></div>
       </div>
     </div>
-
-    <!-- RESULTS -->
     <div id="quiz-results" class="result-wrap" style="display:none">
       <div class="result-profile">
         <div class="result-top">
@@ -217,10 +186,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
         <div class="result-tags" id="r-tags"></div>
         <div class="result-insight" id="r-insight"></div>
       </div>
-
       <div class="result-heading">Your personalised routine</div>
       <div id="r-products"></div>
-
       <div class="share-box" style="margin:1rem 0 0">
         <div class="share-title">Share your results</div>
         <div class="share-sub">Send this quiz to a friend who needs a K-beauty routine</div>
@@ -229,180 +196,77 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
           <button class="sbtn" onclick="copyLink(this)">Copy link</button>
         </div>
       </div>
-
       <button class="retake-btn" onclick="retake()">← Take quiz again</button>
       <div class="disclaimer" style="margin:1rem 0 0">As an Amazon Associate I earn from qualifying purchases.</div>
     </div>
   </div>
 
 </div>
-
 <script>
-// ─── YOUR AMAZON TAG ──────────────────────────────
-const TAG = 'deepti251-20';
-// ─────────────────────────────────────────────────
+const TAG='deepti251-20';
 
-const items = [
-  { emoji:'🐌', name:'COSRX Snail Mucin 96% Essence', brand:'COSRX', desc:'The K-beauty gateway product. 96% snail filtrate floods skin with hydration and repairs barrier fast. 100k+ sold monthly.', price:'$25', asin:'B09XWS7GXN', cats:['skincare','viral'], badges:[{t:'#1 Bestseller',c:'b-hot'},{t:'Viral',c:'b-viral'}] },
-  { emoji:'☀️', name:'Beauty of Joseon Relief Sun SPF50+', brand:'Beauty of Joseon', desc:'The sunscreen that converts SPF haters. Zero white cast, lightweight, no grease — and under $20. Award-winning.', price:'$19', asin:'B09CGQXG6W', cats:['spf','skincare','under20'], badges:[{t:'Under $20',c:'b-fave'},{t:'Award winning',c:'b-blue'}] },
-  { emoji:'🎭', name:'BIODANCE Bio-Collagen Deep Mask (4pk)', brand:'BIODANCE', desc:'Hydrogel mask that melts into skin overnight. Wake up with visibly glassier, plumper skin. TikTok obsession.', price:'$28', asin:'B0B5HGZ7JF', cats:['skincare','viral'], badges:[{t:'TikTok viral',c:'b-viral'}] },
-  { emoji:'🔬', name:'Medicube Zero Pore Pads 2.0', brand:'Medicube', desc:'AHA + BHA dual exfoliation. Clears congestion, shrinks pores, smooths texture. Results in one week.', price:'$30', asin:'B0BV7YJGLF', cats:['skincare','viral'], badges:[{t:'Trending',c:'b-viral'},{t:'Bestseller',c:'b-hot'}] },
-  { emoji:'💋', name:'LANEIGE Lip Sleeping Mask', brand:'LANEIGE', desc:'The lip mask that started a cult. Heals dry cracked lips overnight. Great gift — always sells.', price:'$24', asin:'B01DBTFO98', cats:['skincare','under20'], badges:[{t:'Celebrity fave',c:'b-fave'}] },
-  { emoji:'🧬', name:'Dr. Althea 345 Relief Cream (PDRN)', brand:'Dr. Althea', desc:'PDRN — the hottest K-beauty ingredient of 2026. Stimulates collagen, calms redness, repairs barrier.', price:'$32', asin:'B0CQJX9P5T', cats:['skincare'], badges:[{t:'2026 trend',c:'b-viral'},{t:'Sensitive skin',c:'b-blue'}] },
-  { emoji:'⚡', name:'Medicube Age-R Booster Pro Device', brand:'Medicube', desc:'EMS + galvanic device that boosts serum absorption by 68%. Used by Hailey Bieber and Kylie Jenner.', price:'$149', asin:'B0BXF4GNMZ', cats:['device','viral'], badges:[{t:'Celebrity pick',c:'b-fave'},{t:'Device',c:'b-hot'}] },
-  { emoji:'🧴', name:'COSRX Low pH Good Morning Cleanser', brand:'COSRX', desc:'pH-balanced cleanser that works with your skin instead of stripping it. The cleanser that changed routines.', price:'$14', asin:'B00MIPNBG2', cats:['skincare','under20'], badges:[{t:'Under $20',c:'b-fave'},{t:'Cult classic',c:'b-blue'}] }
+const items=[
+  {emoji:'🐌',name:'COSRX Snail Mucin 96% Essence',brand:'COSRX',desc:'The K-beauty gateway product. 96% snail filtrate floods skin with hydration and repairs barrier fast. 100k+ sold monthly on Amazon.',price:'$25',asin:'B09XWS7GXN',cats:['skincare','viral'],badges:[{t:'#1 Bestseller',c:'b-hot'},{t:'Viral',c:'b-viral'}]},
+  {emoji:'☀️',name:'Beauty of Joseon Relief Sun SPF50+',brand:'Beauty of Joseon',desc:'The sunscreen that converts SPF haters. Zero white cast, lightweight, no grease — under $20. Award-winning formula.',price:'$19',asin:'B09CGQXG6W',cats:['spf','skincare','under20'],badges:[{t:'Under $20',c:'b-fave'},{t:'Award winning',c:'b-blue'}]},
+  {emoji:'🎭',name:'BIODANCE Bio-Collagen Deep Mask (4pk)',brand:'BIODANCE',desc:'Hydrogel mask that melts into skin overnight. Wake up with visibly glassier, plumper skin. TikTok obsession.',price:'$28',asin:'B0B5HGZ7JF',cats:['skincare','viral'],badges:[{t:'TikTok viral',c:'b-viral'}]},
+  {emoji:'🔬',name:'Medicube Zero Pore Pads 2.0',brand:'Medicube',desc:'AHA + BHA dual exfoliation. Clears congestion, shrinks pores, smooths texture. Results in one week.',price:'$30',asin:'B0BV7YJGLF',cats:['skincare','viral','toner'],badges:[{t:'Trending',c:'b-viral'},{t:'Bestseller',c:'b-hot'}]},
+  {emoji:'💋',name:'LANEIGE Lip Sleeping Mask',brand:'LANEIGE',desc:'The lip mask that started a cult following. Heals dry cracked lips overnight. Perfect gift that always sells.',price:'$24',asin:'B01DBTFO98',cats:['skincare','under20'],badges:[{t:'Celebrity fave',c:'b-fave'}]},
+  {emoji:'🧬',name:'Dr. Althea 345 Relief Cream (PDRN)',brand:'Dr. Althea',desc:'PDRN — the hottest K-beauty ingredient right now. Stimulates collagen, calms redness, repairs barrier gently.',price:'$32',asin:'B0CQJX9P5T',cats:['skincare'],badges:[{t:'2026 trend',c:'b-viral'},{t:'Sensitive skin',c:'b-blue'}]},
+  {emoji:'⚡',name:'Medicube Age-R Booster Pro Device',brand:'Medicube',desc:'EMS + galvanic device that boosts serum absorption by 68%. Used by Hailey Bieber and Kylie Jenner.',price:'$149',asin:'B0BXF4GNMZ',cats:['device','viral'],badges:[{t:'Celebrity pick',c:'b-fave'},{t:'Device',c:'b-hot'}]},
+  {emoji:'🧴',name:'COSRX Low pH Good Morning Cleanser',brand:'COSRX',desc:'pH-balanced cleanser that works with your skin instead of stripping it. The cleanser that changed routines.',price:'$14',asin:'B00MIPNBG2',cats:['skincare','under20'],badges:[{t:'Under $20',c:'b-fave'},{t:'Cult classic',c:'b-blue'}]},
+  {emoji:'🌿',name:'Anua Heartleaf 77% Soothing Toner',brand:'Anua',desc:'77% heartleaf extract calms redness and soothes sensitive skin instantly. One of the fastest-rising K-beauty brands right now.',price:'$22',asin:'B0BN3BVH52',cats:['skincare','viral','toner'],badges:[{t:'New pick',c:'b-fave'},{t:'Trending',c:'b-viral'}]},
+  {emoji:'🐯',name:'Cicapair Tiger Grass Cream',brand:'Dr. Jart+',desc:'Green-to-beige color-correcting cream that neutralises redness while healing skin. A cult K-beauty staple.',price:'$52',asin:'B01NAGZJL4',cats:['skincare'],badges:[{t:'Cult classic',c:'b-fave'},{t:'Redness fix',c:'b-blue'}]},
+  {emoji:'🌾',name:'Mugwort Pore Clarifying Serum',brand:'Axis-Y',desc:'Mugwort extract deeply clears pores and calms breakout-prone skin. Clean ingredients, beloved by the K-beauty community.',price:'$27',asin:'B08P3ZVTSW',cats:['skincare','viral'],badges:[{t:'Community fave',c:'b-fave'},{t:'Pore care',c:'b-blue'}]},
+  {emoji:'💧',name:'Dive-In Hyaluronic Acid Serum',brand:'Torriden',desc:'5 types of hyaluronic acid at different molecular weights penetrate every skin layer. Plumping, bouncy skin in days.',price:'$24',asin:'B09V3PPDQX',cats:['skincare','viral'],badges:[{t:'Trending',c:'b-viral'},{t:'Deep hydration',c:'b-blue'}]},
+  {emoji:'✨',name:'AHA BHA Vitamin C Daily Toner',brand:'Some By Mi',desc:'Triple acid toner that brightens, exfoliates and evens skin tone all in one step. Under $20 and a Reddit favourite.',price:'$18',asin:'B07THXJN88',cats:['skincare','toner','under20'],badges:[{t:'Under $20',c:'b-fave'},{t:'Reddit fave',c:'b-viral'}]}
+
+  // TO ADD MORE — paste before this line:
+  // ,{emoji:'✨',name:'PRODUCT NAME',brand:'BRAND',desc:'2 sentences.',price:'$XX',asin:'ASIN-HERE',cats:['skincare'],badges:[{t:'New pick',c:'b-fave'}]}
 ];
 
-const routines = {
-  dryness: {
-    avatar:'💧', title:'Dehydrated, barrier-depleted skin', sub:'Your skin needs deep hydration and barrier repair',
-    tags:[{t:'Dehydrated',c:'rtag-warn'},{t:'Barrier weak',c:'rtag-warn'},{t:'Needs occlusives',c:'rtag-info'}],
-    insight:'K-beauty excels at hydration layering — the key is building moisture from lightest to richest. Your routine below stacks three products that work together to lock in hydration all day.',
-    asins:['B09XWS7GXN','B0B5HGZ7JF','B09CGQXG6W']
-  },
-  acne: {
-    avatar:'🌿', title:'Breakout-prone, congested skin', sub:'Your pores need regular clearing and inflammation control',
-    tags:[{t:'Acne-prone',c:'rtag-warn'},{t:'Congested pores',c:'rtag-warn'},{t:'Needs BHA',c:'rtag-info'}],
-    insight:'K-beauty takes a gentle approach to acne — instead of harsh drying agents, it uses low-dose acids and soothing actives that clear without damaging your barrier.',
-    asins:['B0BV7YJGLF','B00MIPNBG2','B0CQJX9P5T']
-  },
-  aging: {
-    avatar:'✨', title:'Mature skin seeking firmness', sub:'Collagen support and cell turnover are your priorities',
-    tags:[{t:'Fine lines',c:'rtag-warn'},{t:'Needs collagen',c:'rtag-info'},{t:'Firmness goal',c:'rtag-ok'}],
-    insight:'Korean anti-aging focuses on prevention and stimulation rather than covering up. The products below work at a cellular level to rebuild elasticity over time.',
-    asins:['B0BXF4GNMZ','B0B5HGZ7JF','B0CQJX9P5T']
-  },
-  pigmentation: {
-    avatar:'🌟', title:'Uneven tone, dark spot-prone skin', sub:'Brightening actives and strict SPF are non-negotiable',
-    tags:[{t:'Hyperpigmentation',c:'rtag-warn'},{t:'SPF critical',c:'rtag-warn'},{t:'Needs AHA',c:'rtag-info'}],
-    insight:'Dark spots get worse with UV exposure — SPF is your most important product. Pair it with gentle exfoliation and brightening actives for visible results in 4–6 weeks.',
-    asins:['B09CGQXG6W','B0BV7YJGLF','B09XWS7GXN']
-  }
+const routines={
+  dryness:{avatar:'💧',title:'Dehydrated, barrier-depleted skin',sub:'Your skin needs deep hydration and barrier repair',tags:[{t:'Dehydrated',c:'rtag-warn'},{t:'Barrier weak',c:'rtag-warn'},{t:'Needs occlusives',c:'rtag-info'}],insight:'K-beauty excels at hydration layering — building moisture from lightest to richest. Your routine below stacks products that lock in hydration all day.',asins:['B09XWS7GXN','B09V3PPDQX','B0B5HGZ7JF','B09CGQXG6W']},
+  acne:{avatar:'🌿',title:'Breakout-prone, congested skin',sub:'Your pores need regular clearing and inflammation control',tags:[{t:'Acne-prone',c:'rtag-warn'},{t:'Congested pores',c:'rtag-warn'},{t:'Needs BHA',c:'rtag-info'}],insight:'K-beauty takes a gentle approach to acne — low-dose acids and soothing actives that clear without damaging your barrier. Consistency beats intensity.',asins:['B0BV7YJGLF','B00MIPNBG2','B08P3ZVTSW','B09CGQXG6W']},
+  aging:{avatar:'✨',title:'Mature skin seeking firmness',sub:'Collagen support and cell turnover are your priorities',tags:[{t:'Fine lines',c:'rtag-warn'},{t:'Needs collagen',c:'rtag-info'},{t:'Firmness goal',c:'rtag-ok'}],insight:'Korean anti-aging focuses on prevention and stimulation. The products below work at a cellular level to rebuild elasticity over time.',asins:['B0BXF4GNMZ','B0B5HGZ7JF','B0CQJX9P5T','B09CGQXG6W']},
+  pigmentation:{avatar:'🌟',title:'Uneven tone, dark spot-prone skin',sub:'Brightening actives and strict SPF are non-negotiable',tags:[{t:'Hyperpigmentation',c:'rtag-warn'},{t:'SPF critical',c:'rtag-warn'},{t:'Needs AHA',c:'rtag-info'}],insight:'Dark spots worsen with UV exposure — SPF is your most important product. Pair it with gentle exfoliation for visible results in 4–6 weeks.',asins:['B09CGQXG6W','B07THXJN88','B0BV7YJGLF','B09XWS7GXN']}
 };
 
-function url(asin){ 
-  const searchTerms = {
-    'B09XWS7GXN':'COSRX+Snail+Mucin+96+Essence',
-    'B09CGQXG6W':'Beauty+of+Joseon+Relief+Sun+SPF50',
-    'B0B5HGZ7JF':'BIODANCE+Bio+Collagen+Deep+Mask',
-    'B0BV7YJGLF':'Medicube+Zero+Pore+Pads',
-    'B01DBTFO98':'LANEIGE+Lip+Sleeping+Mask',
-    'B0CQJX9P5T':'Dr+Althea+345+Relief+Cream',
-    'B0BXF4GNMZ':'Medicube+Age+R+Booster+Pro',
-    'B00MIPNBG2':'COSRX+Low+pH+Good+Morning+Cleanser'
-  };
-  const search = searchTerms[asin] || 'K-beauty+skincare';
-  return `https://www.amazon.com/s?k=${search}&tag=${TAG}`;
-}
-// ─── SHOP ───
+const searchTerms={'B09XWS7GXN':'COSRX+Snail+Mucin+96+Essence','B09CGQXG6W':'Beauty+of+Joseon+Relief+Sun+SPF50','B0B5HGZ7JF':'BIODANCE+Bio+Collagen+Deep+Mask','B0BV7YJGLF':'Medicube+Zero+Pore+Pads+2','B01DBTFO98':'LANEIGE+Lip+Sleeping+Mask','B0CQJX9P5T':'Dr+Althea+345+Relief+Cream+PDRN','B0BXF4GNMZ':'Medicube+Age+R+Booster+Pro','B00MIPNBG2':'COSRX+Low+pH+Good+Morning+Cleanser','B0BN3BVH52':'Anua+Heartleaf+77+Soothing+Toner','B01NAGZJL4':'Dr+Jart+Cicapair+Tiger+Grass+Cream','B08P3ZVTSW':'Axis-Y+Mugwort+Pore+Clarifying+Serum','B09V3PPDQX':'Torriden+Dive+In+Hyaluronic+Acid+Serum','B07THXJN88':'Some+By+Mi+AHA+BHA+Vitamin+C+Toner'};
+
+function url(asin){return `https://www.amazon.com/s?k=${searchTerms[asin]||'K-beauty+skincare'}&tag=${TAG}`;}
+
 function renderShop(f){
-  const list = f==='all' ? items : items.filter(p=>p.cats.includes(f));
-  const el = document.getElementById('product-list');
-  if(!list.length){ el.innerHTML='<div class="empty">No picks in this category yet!</div>'; return; }
-  el.innerHTML = list.map(p=>`
-    <div class="card">
-      <div class="card-emoji">${p.emoji}</div>
-      <div class="card-body">
-        <div class="badges">${p.badges.map(b=>`<span class="badge ${b.c}">${b.t}</span>`).join('')}</div>
-        <div class="card-name">${p.name}</div>
-        <div class="card-brand">${p.brand}</div>
-        <div class="card-desc">${p.desc}</div>
-        <div class="card-footer">
-          <span class="price">${p.price}</span>
-          <a class="buy" href="${url(p.asin)}" target="_blank" rel="noopener">Shop on Amazon →</a>
-        </div>
-      </div>
-    </div>`).join('');
+  const list=f==='all'?items:items.filter(p=>p.cats.includes(f));
+  const el=document.getElementById('product-list');
+  if(!list.length){el.innerHTML='<div class="empty">No picks here yet — check back soon!</div>';return;}
+  el.innerHTML=list.map(p=>`<div class="card"><div class="card-emoji">${p.emoji}</div><div class="card-body"><div class="badges">${p.badges.map(b=>`<span class="badge ${b.c}">${b.t}</span>`).join('')}</div><div class="card-name">${p.name}</div><div class="card-brand">${p.brand}</div><div class="card-desc">${p.desc}</div><div class="card-footer"><span class="price">${p.price}</span><a class="buy" href="${url(p.asin)}" target="_blank" rel="noopener">Shop on Amazon →</a></div></div></div>`).join('');
 }
 
-function filter(f,btn){
-  document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  renderShop(f);
-}
+function filter(f,btn){document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderShop(f);}
+function showTab(tab,btn){document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));btn.classList.add('active');document.getElementById('view-'+tab).classList.add('active');}
 
-// ─── TABS ───
-function showTab(tab, btn){
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById('view-'+tab).classList.add('active');
-}
-
-// ─── QUIZ ───
-const ans = {};
-
-function pick(el, key, val){
-  el.closest('.q-opts').querySelectorAll('.q-opt').forEach(o=>o.classList.remove('sel'));
-  el.classList.add('sel');
-  ans[key] = val;
-  const btnMap={concern:'next1',type:'next2',level:'next3',budget:'next4'};
-  const btn = document.getElementById(btnMap[key]);
-  if(btn) btn.classList.add('ready');
-}
-
-function goTo(n){
-  const steps=[1,2,3,4];
-  steps.forEach(s=>{
-    const el=document.getElementById('q'+s);
-    if(el) el.style.display = s===n ? 'block' : 'none';
-  });
-  const pct = {1:20,2:45,3:70,4:90};
-  document.getElementById('q-fill').style.width = pct[n]+'%';
-}
+const ans={};
+function pick(el,key,val){el.closest('.q-opts').querySelectorAll('.q-opt').forEach(o=>o.classList.remove('sel'));el.classList.add('sel');ans[key]=val;const m={concern:'next1',type:'next2',level:'next3',budget:'next4'};const b=document.getElementById(m[key]);if(b)b.classList.add('ready');}
+function goTo(n){[1,2,3,4].forEach(s=>{const el=document.getElementById('q'+s);if(el)el.style.display=s===n?'block':'none';});document.getElementById('q-fill').style.width={1:'20%',2:'45%',3:'70%',4:'90%'}[n];}
 
 function showResults(){
-  if(!ans.concern) return;
-  const r = routines[ans.concern] || routines.dryness;
-  document.getElementById('r-avatar').textContent = r.avatar;
-  document.getElementById('r-title').textContent = r.title;
-  document.getElementById('r-sub').textContent = r.sub;
-  document.getElementById('r-tags').innerHTML = r.tags.map(t=>`<span class="rtag ${t.c}">${t.t}</span>`).join('');
-  document.getElementById('r-insight').textContent = r.insight;
-
-  const prods = r.asins.map(asin => items.find(p=>p.asin===asin)).filter(Boolean);
-  document.getElementById('r-products').innerHTML = prods.map((p,i)=>`
-    <div class="card" style="margin-bottom:8px">
-      <div class="card-emoji" style="font-size:22px;width:52px;height:52px">${p.emoji}</div>
-      <div class="card-body">
-        <div style="font-size:11px;font-weight:700;color:#999;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.05em">Step ${i+1}</div>
-        <div class="card-name">${p.name}</div>
-        <div class="card-brand">${p.brand}</div>
-        <div class="card-footer">
-          <span class="price">${p.price}</span>
-          <a class="buy" href="${url(p.asin)}" target="_blank" rel="noopener">Shop →</a>
-        </div>
-      </div>
-    </div>`).join('');
-
+  if(!ans.concern)return;
+  const r=routines[ans.concern]||routines.dryness;
+  document.getElementById('r-avatar').textContent=r.avatar;
+  document.getElementById('r-title').textContent=r.title;
+  document.getElementById('r-sub').textContent=r.sub;
+  document.getElementById('r-tags').innerHTML=r.tags.map(t=>`<span class="rtag ${t.c}">${t.t}</span>`).join('');
+  document.getElementById('r-insight').textContent=r.insight;
+  const prods=r.asins.map(a=>items.find(p=>p.asin===a)).filter(Boolean);
+  document.getElementById('r-products').innerHTML=prods.map((p,i)=>`<div class="card" style="margin-bottom:8px"><div class="card-emoji" style="font-size:22px;width:52px;height:52px">${p.emoji}</div><div class="card-body"><div style="font-size:11px;font-weight:700;color:#999;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.05em">Step ${i+1}</div><div class="card-name">${p.name}</div><div class="card-brand">${p.brand}</div><div class="card-footer"><span class="price">${p.price}</span><a class="buy" href="${url(p.asin)}" target="_blank" rel="noopener">Shop →</a></div></div></div>`).join('');
   document.getElementById('quiz-questions').style.display='none';
   document.getElementById('quiz-results').style.display='block';
   document.getElementById('q-fill').style.width='100%';
 }
 
-function retake(){
-  Object.keys(ans).forEach(k=>delete ans[k]);
-  document.querySelectorAll('.q-opt').forEach(o=>o.classList.remove('sel'));
-  ['next1','next2','next3','next4'].forEach(id=>{
-    const b=document.getElementById(id);
-    if(b) b.classList.remove('ready');
-  });
-  document.getElementById('quiz-results').style.display='none';
-  document.getElementById('quiz-questions').style.display='block';
-  goTo(1);
-}
-
-// ─── SHARE ───
-function wa(){
-  const msg = encodeURIComponent('Found this K-beauty picks page with a skin quiz that tells you exactly what your skin needs — everything ships from Amazon 👉 '+window.location.href);
-  window.open('https://wa.me/?text='+msg,'_blank');
-}
-function copyLink(btn){
-  navigator.clipboard.writeText(window.location.href).then(()=>{
-    btn.textContent='✓ Copied!';
-    setTimeout(()=>btn.textContent='Copy link',2000);
-  });
-}
+function retake(){Object.keys(ans).forEach(k=>delete ans[k]);document.querySelectorAll('.q-opt').forEach(o=>o.classList.remove('sel'));['next1','next2','next3','next4'].forEach(id=>{const b=document.getElementById(id);if(b)b.classList.remove('ready');});document.getElementById('quiz-results').style.display='none';document.getElementById('quiz-questions').style.display='block';goTo(1);}
+function wa(){window.open('https://wa.me/?text='+encodeURIComponent('Found this K-beauty picks page with a free skin quiz — tells you exactly what your skin needs and everything ships from Amazon 👉 '+window.location.href),'_blank');}
+function copyLink(btn){navigator.clipboard.writeText(window.location.href).then(()=>{btn.textContent='✓ Copied!';setTimeout(()=>btn.textContent='Copy link',2000);});}
 
 renderShop('all');
 </script>
